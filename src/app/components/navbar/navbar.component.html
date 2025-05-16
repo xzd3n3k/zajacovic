@@ -1,0 +1,16 @@
+<div class="navbar-container">
+  <zaj-button class="nav-btn" size="icon" variant="ghost" (click)="toggleNavbar()">
+    <zaj-icon class="menu-icon" name="menu_icon"></zaj-icon>
+  </zaj-button>
+
+  <nav #navRef class="nav">
+    <zaj-button class="nav-btn nav-close-btn" size="icon" variant="ghost" (click)="toggleNavbar()">
+      <zaj-icon class="close-icon" name="close_icon"></zaj-icon>
+    </zaj-button>
+
+    <a routerLink="/">Home</a>
+    <a routerLink="/products">Products</a>
+    <a routerLink="/faq">FAQ</a>
+    <a routerLink="/About">About</a>
+  </nav>
+</div>
