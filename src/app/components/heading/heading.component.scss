@@ -1,0 +1,9 @@
+:host {
+  display: inline-block;
+  font-size: var(--text-heading-size);
+  font-weight: bold;
+
+  * {
+    display: inline-block;
+  }
+}
