@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  padding: var(--padding-base) calc(var(--padding-base) * 10);
+}
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap-base) * 4);
+}
+
+.home-page-info-text {
+  display: inline-block;
+  font-size: var(--text-size-large);
+}
