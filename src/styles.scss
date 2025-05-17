@@ -1,6 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-@import "globals.scss";
-@import "_variables.scss";
+@use "globals" as *;
+@use "variables" as *;
 
 @font-face {
   font-family: "GilroyBold";
