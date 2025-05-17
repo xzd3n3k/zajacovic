@@ -1,5 +1,8 @@
 {
   "i18n": {
+    "footer": {
+      "copyright": "Všetky práva vyhradené."
+    },
     "navbar": {
       "home": "Domov",
       "products": "Produkty",
