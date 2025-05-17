@@ -7,11 +7,9 @@ export const routes: Routes = [
   {
     path: 'home',
     component: HomeScreenComponent,
-    title: 'Zajacovič Exhaust Systems'
   },
   {
     path: 'about',
     component: AboutScreenComponent,
-    title: 'Zajacovič Exhaust Systems'
   }
 ];
