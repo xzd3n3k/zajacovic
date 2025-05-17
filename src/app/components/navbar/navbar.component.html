@@ -8,9 +8,8 @@
       <zaj-icon class="close-icon" name="close_icon"></zaj-icon>
     </zaj-button>
 
-    <a routerLink="/">{{ 'i18n.navbar.home' | translate }}</a>
-    <a routerLink="/products">{{ 'i18n.navbar.products' | translate }}</a>
-    <a routerLink="/faq">FAQ</a>
-    <a routerLink="/about">{{ 'i18n.navbar.about' | translate }}</a>
+    @for (navLink of navLinks(); track navLink.route) {
+      <a [routerLink]="navLink.route" (click)="navLink.clickFunction()">{{navLink.label | translate}}</a>
+    }
   </nav>
 </div>
