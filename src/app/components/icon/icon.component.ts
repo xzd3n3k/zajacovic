@@ -29,16 +29,22 @@ export class IconComponent implements OnChanges {
         .pipe(take(1))
         .subscribe({
           next: (svg: string) => {
-            let processedSvg = svg
-              .replace(/fill=".*?"/gi, `fill="${colorValue}"`)
-              .replace(/stroke=".*?"/gi, `stroke="${colorValue}"`)
+            let processedSvg = svg;
+
+            if (colorValue && colorValue !== 'rawIcon') {
+              processedSvg = processedSvg
+                .replace(/fill=".*?"/gi, `fill="${colorValue}"`)
+                .replace(/stroke=".*?"/gi, `stroke="${colorValue}"`);
+
+              processedSvg = processedSvg.replace(
+                /<(path|circle|rect|polygon|line|ellipse)(\s|>)/gi,
+                `<$1 fill="${colorValue}" stroke="${colorValue}" `
+              );
+            }
+
+            processedSvg = processedSvg
               .replace(/width=".*?"/i, `width="${sizeValue}"`)
               .replace(/height=".*?"/i, `height="${sizeValue}"`);
-
-            processedSvg = processedSvg.replace(
-              /<(path|circle|rect|polygon|line|ellipse)(\s|>)/gi,
-              `<$1 fill="${colorValue}" stroke="${colorValue}" `
-            );
 
             this.svgContent.set(
               this.sanitizer.bypassSecurityTrustHtml(processedSvg)
