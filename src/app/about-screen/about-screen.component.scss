@@ -5,3 +5,8 @@
 
   padding: var(--padding-base) calc(var(--padding-base) * 10);
 }
+
+.about-page-info-text {
+  display: inline-block;
+  font-size: var(--text-size-large);
+}

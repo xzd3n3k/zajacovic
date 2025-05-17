@@ -1,0 +1,16 @@
+{
+  "i18n": {
+    "navbar": {
+      "home": "Domů",
+      "products": "Produkty",
+      "about": "O nás"
+    },
+    "home": {
+      "heading": "Profesionální úpravce automobilů",
+      "subheading": "Specializujeme se na zakázkovou výrobu nerezových dílů pro motorsport a úpravy vozidel. Na míru navrhujeme a vyrábíme výfukové systémy, intercoolery, potrubí a další technické komponenty. Pracujeme metodami TIG a CO2, s důrazem na precizní zpracování, funkčnost a čistý design."
+    },
+    "about": {
+      "text": "Jsme mistři skalpelu a svářečky! Potřebujete nový výfuk, upravit sání, nebo snad kompletní downpipe? Zajacovič to řeže a tvaruje jako Picasso, a když je potřeba, vymodeluje výfuk, který by i terminátor záviděl! Od nerezi, přes downpipe, až po tuning – stačí říct, a vaše auto bude dýchat jak Rocky v nejlepších letech!"
+    }
+  }
+}

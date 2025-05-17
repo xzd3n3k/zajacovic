@@ -1,0 +1,16 @@
+{
+  "i18n": {
+    "navbar": {
+      "home": "Home",
+      "products": "Products",
+      "about": "About"
+    },
+    "home": {
+      "heading": "Professional car modifier",
+      "subheading": "We specialize in custom stainless steel part fabrication for motorsport and vehicle modifications. We design and produce exhaust systems, intercoolers, piping, and other technical components to fit your exact needs. Our work uses TIG and CO2 welding methods with a strong focus on precision, functionality, and clean design."
+    },
+    "about": {
+      "text": "We’re masters of the scalpel and the welder! Need a new exhaust, intake mod, or even a full custom downpipe? Zajacovič cuts and shapes like Picasso, and when it comes down to it, he’ll craft an exhaust system that even the Terminator would envy! From stainless steel to downpipes to full-on tuning — just say the word, and your car will breathe like Rocky in his prime!"
+    }
+  }
+}
