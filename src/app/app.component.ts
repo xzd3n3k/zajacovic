@@ -14,17 +14,17 @@ import {TranslateModule, TranslateService} from '@ngx-translate/core';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  private readonly translate = inject(TranslateService);
+  private readonly translateService = inject(TranslateService);
 
   constructor() {
-    this.translate.addLangs(['en', 'cs', 'sk']);
-    this.translate.setDefaultLang('cs');
+    this.translateService.addLangs(['en', 'cs', 'sk']);
+    this.translateService.setDefaultLang('cs');
 
-    const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang?.match(/en|cs|sk/) ? browserLang : 'cs');
+    const browserLang = this.translateService.getBrowserLang();
+    this.translateService.use(browserLang?.match(/en|cs|sk/) ? browserLang : 'cs');
   }
 
   switchLang(lang: string) {
-    this.translate.use(lang);
+    this.translateService.use(lang);
   }
 }
