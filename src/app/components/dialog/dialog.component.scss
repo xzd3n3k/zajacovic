@@ -1,0 +1,38 @@
+::ng-deep .dialog-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-container {
+  background: var(--theme-color-secondary-100);
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90vw;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dialog-header {
+  padding: calc(var(--padding-base-quarter) * 3) var(--padding-base);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog-content {
+  padding: var(--padding-base);
+  flex-grow: 1;
+}
+
+.dialog-footer {
+  padding: calc(var(--padding-base-quarter) * 3) var(--padding-base);
+  text-align: right;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}

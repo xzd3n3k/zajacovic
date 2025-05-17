@@ -1,0 +1,23 @@
+<ng-template #dialogTemplate>
+  <div class="dialog-container">
+
+    @if (header()) {
+      <div class="dialog-header">
+        <span>{{ title() }}</span>
+        @if (closable()) {
+          <button class="close-button" (click)="close()">✖</button>
+        }
+      </div>
+    }
+
+    <div class="dialog-content">
+      <ng-content></ng-content>
+    </div>
+
+    @if (footer()) {
+      <div class="dialog-footer">
+        <ng-content select="[dialog-footer]"></ng-content>
+      </div>
+    }
+  </div>
+</ng-template>
