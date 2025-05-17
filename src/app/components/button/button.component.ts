@@ -1,7 +1,6 @@
 import {Component, input} from '@angular/core';
-
-type ButtonVariant = 'primary' | 'secondary' | 'destructive' | 'ghost' | 'success';
-type ButtonSize = 'small' | 'normal' | 'large' | 'icon';
+import {ButtonVariant} from '../../models/button-variant.type';
+import {ButtonSize} from '../../models/button-size.type';
 
 @Component({
   selector: 'zaj-button',
