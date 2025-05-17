@@ -17,7 +17,7 @@ export class IconComponent implements OnChanges {
   private readonly http = inject(HttpClient);
   private readonly sanitizer = inject(DomSanitizer);
 
-  svgContent: WritableSignal<SafeHtml | null> = signal(null);
+  protected readonly svgContent: WritableSignal<SafeHtml | null> = signal(null);
 
   ngOnChanges(): void {
     if (this.name()) {
