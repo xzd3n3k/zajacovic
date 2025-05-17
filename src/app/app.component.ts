@@ -1,7 +1,8 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
+import {LanguageSelectorComponent} from './components/language-selector/language-selector.component';
 
 @Component({
   selector: 'zaj-root',
@@ -9,12 +10,15 @@ import {TranslateModule, TranslateService} from '@ngx-translate/core';
     RouterOutlet,
     NavbarComponent,
     TranslateModule,
+    LanguageSelectorComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   private readonly translateService = inject(TranslateService);
+
+  protected readonly currentYear = signal(new Date().getFullYear());
 
   constructor() {
     this.translateService.addLangs(['en', 'cs', 'sk']);

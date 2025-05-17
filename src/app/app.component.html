@@ -2,3 +2,7 @@
 <div class="page-container">
   <router-outlet></router-outlet>
 </div>
+<div class="grid align-center footer-container">
+  <zaj-language-selector class="grid-col-1"></zaj-language-selector>
+  <span class="grid-col-2 footer-copyright">© {{ currentYear() }} Zajacovič. {{ 'i18n.footer.copyright' | translate }}</span>
+</div>
