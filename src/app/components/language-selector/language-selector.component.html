@@ -1,0 +1,17 @@
+<zaj-button #origin variant="ghost" size="icon">
+  <zaj-icon color="rawIcon" [name]="currentLanguage()!.flag" [size]="24"></zaj-icon>
+  {{ isMobile() ? '' : currentLanguage()!.label }}
+</zaj-button>
+
+<zaj-popup [origin]="origin.element">
+  <div class="language-selector-container">
+    @for (lang of languages(); track lang.code) {
+      @if (!lang.active) {
+        <zaj-button (click)="switchLanguage(lang.code)" variant="ghost" size="icon">
+          <zaj-icon color="rawIcon" [name]="lang.flag" [size]="24"></zaj-icon>
+          {{ isMobile() ? '' : lang.label }}
+        </zaj-button>
+      }
+    }
+  </div>
+</zaj-popup>
