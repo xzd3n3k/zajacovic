@@ -1,7 +1,7 @@
 <div class="showcase-background-image"></div>
 <div class="showcase-page-container">
   <zaj-heading class="showcase-heading" textColor="--text-color-primary">{{'i18n.navbar.showcase' | translate }}</zaj-heading>
-  <div class="post-container">
+  <div class="posts-container">
     @for (post of posts(); track post.image) {
       <zaj-post [post]="post"></zaj-post>
     }
