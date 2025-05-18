@@ -17,6 +17,11 @@ import {Post} from '../shared/models/post.model';
 export class ShowcaseScreenComponent {
   protected readonly posts = signal<Post[]>([
     {
+      title: 'i18n.showcase.exhaustblock',
+      description: 'i18n.showcase.exhaustblock',
+      image: 'exhaustblock.jpg',
+    },
+    {
       title: 'Audi RS6 C7 4.0',
       description: 'i18n.showcase.rs6',
       image: 'audirs6c740.jpg',
