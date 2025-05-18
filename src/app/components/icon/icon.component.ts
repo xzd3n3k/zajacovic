@@ -12,6 +12,7 @@ import {take} from 'rxjs';
 export class IconComponent implements OnChanges {
   readonly name = input.required<string>();
   readonly size = input<number>(32);
+  readonly height = input<number | undefined>();
   readonly color = input<string>('currentColor');
 
   private readonly http = inject(HttpClient);
@@ -42,9 +43,17 @@ export class IconComponent implements OnChanges {
               );
             }
 
-            processedSvg = processedSvg
-              .replace(/width=".*?"/i, `width="${sizeValue}"`)
-              .replace(/height=".*?"/i, `height="${sizeValue}"`);
+            // if height is not set, use classic size
+            if (!this.height()) {
+              processedSvg = processedSvg
+                .replace(/width=".*?"/i, `width="${sizeValue}"`)
+                .replace(/height=".*?"/i, `height="${sizeValue}"`);
+            } else {
+              // else if height is set, let css set width automatically
+              processedSvg = processedSvg
+                .replace(/width=".*?"/i, '')
+                .replace(/height=".*?"/i, `height="${this.height()}"`);
+            }
 
             this.svgContent.set(
               this.sanitizer.bypassSecurityTrustHtml(processedSvg)
