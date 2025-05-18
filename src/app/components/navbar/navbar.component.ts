@@ -4,7 +4,7 @@ import {ButtonComponent} from '../button/button.component';
 import {IconComponent} from '../icon/icon.component';
 import {TranslatePipe} from '@ngx-translate/core';
 import {NavBarLink} from '../../models/nav-bar-link.model';
-import {isMobile} from '../../shared/utils/device.util';
+import {isMobile, isSmallDevice} from '../../shared/utils/device.util';
 
 @Component({
   selector: 'zaj-navbar',
@@ -19,7 +19,9 @@ import {isMobile} from '../../shared/utils/device.util';
 })
 export class NavbarComponent {
   private readonly navRef = viewChild.required<ElementRef>('navRef');
+
   protected readonly isMobile = isMobile;
+  protected readonly isSmallDevice = isSmallDevice;
 
   protected readonly navLinks: WritableSignal<NavBarLink[]> = signal([
     { label: 'i18n.navbar.home', route: '/home', clickFunction: () => this.toggleNavbar() },
@@ -29,6 +31,8 @@ export class NavbarComponent {
   ]);
 
   protected toggleNavbar() {
-    this.navRef().nativeElement.classList.toggle('responsive_nav');
+    if (this.isSmallDevice()) {
+      this.navRef().nativeElement.classList.toggle('responsive_nav');
+    }
   }
 }
