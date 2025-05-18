@@ -6,18 +6,19 @@
   padding: var(--padding-base) calc(var(--padding-base) * 10);
 }
 
+.post-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
 .showcase-page-container {
   display: flex;
   flex-direction: column;
   gap: calc(var(--gap-base) * 4);
   height: 100%;
-}
-
-.showcase-page-info-text {
-  display: inline-block;
-  font-size: var(--text-size-large);
-  color: white;
-  overflow: auto;
 }
 
 .showcase-background-image {
@@ -33,4 +34,8 @@
   left: 0;
   position: absolute;
   z-index: var(--z-index-background);
+}
+
+.showcase-heading {
+  text-align: center;
 }

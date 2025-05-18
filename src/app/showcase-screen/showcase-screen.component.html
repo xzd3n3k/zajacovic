@@ -1,5 +1,9 @@
 <div class="showcase-background-image"></div>
 <div class="showcase-page-container">
-  <zaj-heading textColor="--text-color-primary">{{'i18n.navbar.showcase' | translate }}</zaj-heading>
-  <span class="showcase-page-info-text">proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text proste nejaky text </span>
+  <zaj-heading class="showcase-heading" textColor="--text-color-primary">{{'i18n.navbar.showcase' | translate }}</zaj-heading>
+  <div class="post-container">
+    @for (post of posts(); track post.image) {
+      <zaj-post [post]="post"></zaj-post>
+    }
+  </div>
 </div>
