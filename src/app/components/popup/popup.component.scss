@@ -4,7 +4,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   padding: var(--padding-base-half);
   border-radius: 4px;
-  z-index: 1000;
+  z-index: var(--z-index-overlay);
 }
 
 ::ng-deep .transparent-backdrop {
