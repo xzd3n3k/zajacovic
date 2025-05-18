@@ -9,7 +9,7 @@
     </zaj-button>
 
     @for (navLink of navLinks(); track navLink.route) {
-      <a [routerLink]="navLink.route" (click)="navLink.clickFunction()">{{navLink.label | translate}}</a>
+      <a [class.disabled]="navLink.disabled" [routerLink]="navLink.route" (click)="navLink.clickFunction()">{{navLink.label | translate}}</a>
     }
   </nav>
 

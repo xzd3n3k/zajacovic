@@ -12,9 +12,16 @@
 
     a {
       text-decoration: none;
+      user-select: none;
       // TODO add variable and override in each screen/page
       color: white;
       align-content: center;
+
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+      }
     }
   }
 
