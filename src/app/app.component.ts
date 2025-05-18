@@ -24,6 +24,13 @@ export class AppComponent {
     this.translateService.addLangs(['en', 'cs', 'sk']);
     this.translateService.setDefaultLang('cs');
 
+    const savedLang = localStorage.getItem('lang');
+
+    if (savedLang) {
+      this.switchLang(savedLang);
+      return;
+    }
+
     const browserLang = this.translateService.getBrowserLang();
     this.translateService.use(browserLang?.match(/en|cs|sk/) ? browserLang : 'cs');
   }

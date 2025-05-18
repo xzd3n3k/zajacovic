@@ -34,6 +34,7 @@ export class LanguageSelectorComponent implements OnInit {
 
   protected switchLanguage(languageCode: string) {
     this.updateLanguages(languageCode);
+    localStorage.setItem('lang', languageCode);
     this.translateService.use(languageCode);
   }
 
