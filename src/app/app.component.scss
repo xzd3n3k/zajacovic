@@ -6,6 +6,9 @@
 
 .footer-container {
   padding: var(--padding-base) calc(var(--padding-base)* 10);
+  * {
+    justify-self: left;
+  }
 }
 
 .footer-copyright {
