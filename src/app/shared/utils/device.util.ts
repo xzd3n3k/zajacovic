@@ -24,6 +24,10 @@ export function isTV(): boolean {
   return match('(min-width: 1201px)');
 }
 
+export function isSmallDevice(): boolean {
+  return match('(max-width: 1024px)');
+}
+
 export function getDeviceType(): DeviceType {
   if (isMobile()) return 'mobile';
   if (isTablet()) return 'tablet';
