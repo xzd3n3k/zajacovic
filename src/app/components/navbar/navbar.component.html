@@ -14,6 +14,6 @@
   </nav>
 
   <zaj-button routerLink="/home" variant="ghost" size="icon">
-    <zaj-icon name="zajac_icon"></zaj-icon>
+    <zaj-icon [name]="isMobile() ? 'zajac_icon' : 'zajac_text_icon'" [height]="32" color="rawIcon"></zaj-icon>
   </zaj-button>
 </div>

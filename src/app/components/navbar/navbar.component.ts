@@ -4,6 +4,7 @@ import {ButtonComponent} from '../button/button.component';
 import {IconComponent} from '../icon/icon.component';
 import {TranslatePipe} from '@ngx-translate/core';
 import {NavBarLink} from '../../models/nav-bar-link.model';
+import {isMobile} from '../../shared/utils/device.util';
 
 @Component({
   selector: 'zaj-navbar',
@@ -18,6 +19,7 @@ import {NavBarLink} from '../../models/nav-bar-link.model';
 })
 export class NavbarComponent {
   private readonly navRef = viewChild.required<ElementRef>('navRef');
+  protected readonly isMobile = isMobile;
 
   protected readonly navLinks: WritableSignal<NavBarLink[]> = signal([
     { label: 'i18n.navbar.home', route: '/home', clickFunction: () => this.toggleNavbar() },
