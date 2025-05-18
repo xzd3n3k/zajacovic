@@ -1,6 +1,6 @@
 import {Component, computed, inject, OnInit, signal, WritableSignal} from '@angular/core';
 import {ButtonComponent} from '../button/button.component';
-import {Language} from '../../models/language.model';
+import {Language} from '../../shared/models/language.model';
 import {IconComponent} from '../icon/icon.component';
 import {TranslateService} from '@ngx-translate/core';
 import {PopupComponent} from '../popup/popup.component';

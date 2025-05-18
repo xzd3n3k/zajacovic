@@ -1,6 +1,6 @@
 import {Component, ElementRef, inject, input} from '@angular/core';
-import {ButtonVariant} from '../../models/button-variant.type';
-import {ButtonSize} from '../../models/button-size.type';
+import {ButtonVariant} from '../../shared/models/button-variant.type';
+import {ButtonSize} from '../../shared/models/button-size.type';
 
 @Component({
   selector: 'zaj-button',

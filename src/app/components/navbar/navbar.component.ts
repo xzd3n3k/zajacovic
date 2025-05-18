@@ -3,7 +3,7 @@ import {RouterLink} from '@angular/router';
 import {ButtonComponent} from '../button/button.component';
 import {IconComponent} from '../icon/icon.component';
 import {TranslatePipe} from '@ngx-translate/core';
-import {NavBarLink} from '../../models/nav-bar-link.model';
+import {NavBarLink} from '../../shared/models/nav-bar-link.model';
 import {isMobile, isSmallDevice} from '../../shared/utils/device.util';
 
 @Component({
