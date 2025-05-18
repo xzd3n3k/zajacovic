@@ -1,11 +1,11 @@
 <div class="navbar-container">
   <zaj-button class="nav-btn" size="icon" variant="ghost" (click)="toggleNavbar()">
-    <zaj-icon class="menu-icon" name="menu_icon"></zaj-icon>
+    <zaj-icon class="menu-icon" name="menu_icon" color="white"></zaj-icon>
   </zaj-button>
 
   <nav #navRef class="nav">
     <zaj-button class="nav-btn nav-close-btn" size="icon" variant="ghost" (click)="toggleNavbar()">
-      <zaj-icon class="close-icon" name="close_icon"></zaj-icon>
+      <zaj-icon class="close-icon" name="close_icon" color="white"></zaj-icon>
     </zaj-button>
 
     @for (navLink of navLinks(); track navLink.route) {
