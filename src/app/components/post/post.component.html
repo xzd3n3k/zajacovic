@@ -1,6 +1,6 @@
 <zaj-dialog>
   <img #imgRef src="assets/images/{{post().image}}" class="post-dialog-img"/>
-  <span class="post-dialog-text" [style.max-width.px]="imgRef.offsetWidth">{{post().description}}</span>
+  <span class="post-dialog-text" [style.max-width.px]="imgRef.offsetWidth">{{post().description ?? 'i18n.showcase.noDescription' | translate}}</span>
 </zaj-dialog>
 
 <div class="post-preview">
