@@ -21,7 +21,7 @@ export class IconComponent implements OnChanges {
 
   ngOnChanges(): void {
     if (this.name()) {
-      const url = `assets/${this.name()}.svg`;
+      const url = `assets/icons/${this.name()}.svg`;
       const colorValue = this.color();
       const sizeValue = this.size();
 
