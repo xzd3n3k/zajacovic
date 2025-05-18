@@ -1,0 +1,28 @@
+.post-dialog-img {
+  width: 100%;
+  max-width: 800px;
+}
+
+.post-dialog-text {
+  display: block;
+  width: 100%;
+}
+
+.post-preview {
+  width: 300px;
+
+  img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .post-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+  }
+}

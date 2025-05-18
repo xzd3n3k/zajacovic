@@ -1,0 +1,9 @@
+<zaj-dialog>
+  <img #imgRef src="assets/images/{{post().image}}" class="post-dialog-img"/>
+  <span class="post-dialog-text" [style.max-width.px]="imgRef.offsetWidth">{{post().description}}</span>
+</zaj-dialog>
+
+<div class="post-preview">
+  <img src="assets/images/{{post().image}}" (click)="openDialog()"/>
+  <p class="post-text">{{post().title}}</p>
+</div>
