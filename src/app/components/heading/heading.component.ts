@@ -8,4 +8,11 @@ import {Component, input} from '@angular/core';
 })
 export class HeadingComponent {
   readonly textColor = input('currentColor');
+
+  resolveColor(value: string): string {
+    if (value?.startsWith('--')) {
+      return `var(${value})`;
+    }
+    return value || 'currentColor';
+  }
 }
