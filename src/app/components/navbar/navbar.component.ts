@@ -25,7 +25,7 @@ export class NavbarComponent {
 
   protected readonly navLinks: WritableSignal<NavBarLink[]> = signal([
     { label: 'i18n.navbar.home', route: '/home', clickFunction: () => this.toggleNavbar() },
-    { label: 'i18n.navbar.products', route: '/products', clickFunction: () => this.toggleNavbar(), disabled: true },
+    { label: 'i18n.navbar.showcase', route: '/showcase', clickFunction: () => this.toggleNavbar() },
     { label: 'FAQ', route: '/faq', clickFunction: () => this.toggleNavbar(), disabled: true },
     { label: 'i18n.navbar.about', route: '/about', clickFunction: () => this.toggleNavbar() },
   ]);
