@@ -46,5 +46,9 @@ export class ShowcaseScreenComponent {
       description: 'i18n.showcase.meganers',
       image: 'renaultmeganers.jpg',
     },
+    {
+      title: 'Kia Stinger 3.3 V6',
+      image: 'kiastinger.jpg',
+    }
   ]);
 }
