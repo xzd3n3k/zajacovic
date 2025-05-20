@@ -4,6 +4,6 @@
 </zaj-dialog>
 
 <div class="post-preview">
-  <img #imgRef src="assets/images/{{post().image}}" (click)="openDialog()"/>
-  <p class="post-text" [style.max-width.px]="imgRef.offsetWidth">{{post().title ?? '' | translate}}</p>
+  <img #imgRef src="assets/images/{{post().image}}" (load)="updateMaxTextWidth(imgRef)" (click)="openDialog()"/>
+  <p class="post-text" [style.max-width.px]="textWidth()">{{post().title ?? '' | translate}}</p>
 </div>
